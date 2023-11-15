@@ -49,13 +49,13 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-     - name: Checkout repository
+      - name: Checkout repository
         # To reference external workflows, we use the `uses` keyword.
         # The thing after the `@` is the version of the workflow, and is a Git tag.
         uses: actions/checkout@v3
       - name: run-lint
         run: npm run lint:check
-  prettier: 
+  prettier:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -64,5 +64,3 @@ jobs:
         uses: actions/checkout@v3
       - name: run-prettier
         run: npm run prettier:check
-
-
