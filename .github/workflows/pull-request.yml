@@ -72,12 +72,9 @@ jobs:
         run: npm run format:check
   post-comment:
     runs-on: ubuntu-latest
-
     needs: [lint, prettier]
-    
     permissions:
       pull-requests: write
-
     steps:
       - name: Post comment
         uses: peter-evans/create-or-update-comment@v3
