@@ -35,6 +35,7 @@ jobs:
     # There are many virtual machines we can run our jobs on. The most
     # common one is `ubuntu-latest`.
     runs-on: ubuntu-latest
+    needs: [build_job]
 
     # Each job can have multiple steps. These will be run in sequence.
     permissions:
